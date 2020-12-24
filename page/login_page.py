@@ -2,13 +2,15 @@ from base.base_page import Base
 import page
 from selenium.webdriver.common.by import By
 import time
+
 """
 负责登录页面的逻辑
 """
 
 class LoginPage(Base):
-    def __init__(self,url):
-        Base.__init__(self,url)
+    # 初始化函数  动态把driver传入
+    def __init__(self,driver):
+        Base.__init__(self,driver)
 
 
     #点击登录逻辑

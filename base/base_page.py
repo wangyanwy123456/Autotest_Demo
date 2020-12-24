@@ -2,15 +2,18 @@ from utils import DriverUtils
 import logging
 import time
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 
 #对象基类
 class Base():
 
-    def __init__(self,url):
-        self.url = url
-        self.driver = DriverUtils.get_driver(url)
 
+    # 当类初始化的时候这个方法就执行
+    def __init__(self,driver):
+        self.driver = driver
+        self.Action = ActionChains(self.driver)
 
     #定位元素
     def find_ele(self,loc):
@@ -29,6 +32,15 @@ class Base():
         self.find_ele(loc).clear()
         self.find_ele(loc).send_keys(text)
         time.sleep(1)
+
+    #切换窗口
+    def switch_window(self,index):
+        new_window = self.driver.window_handles[index]
+        self.driver.switch_to.window(new_window)
+
+
+
+
 
 
 # if __name__ == "__main__":
