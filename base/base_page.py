@@ -39,6 +39,17 @@ class Base():
         self.driver.switch_to.window(new_window)
 
 
+    #对被覆盖的元素执行点击操作
+    def click_cover_ele(self,loc):
+        ele = self.find_ele(loc)
+        self.driver.execute_script("arguments[0].click();",ele)
+
+
+    #获取当前页面的标题
+    def get_page_title(self,cur_title):
+        title = self.driver.title()
+        if cur_title == title:
+            return cur_title
 
 
 

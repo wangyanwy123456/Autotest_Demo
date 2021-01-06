@@ -32,10 +32,19 @@ description_input = By.XPATH,".//textarea[@id='description']"       #描述输�
 close_btn = By.XPATH,".//button/span[contains(text(),'关 闭')]"       #关闭按钮
 confirm_btn = By.XPATH,".//button/span[contains(text(),'确 定')]"       #确定按钮
 
+#删除角色页面
+# delete_role = ((By.XPATH,".//td[contains(text(),name)]/../td//a[contains(text(),'删除')]" .format(name)])) #删除角色
+role_delete_success = (By.XPATH,".//span[contains(text(),'删除成功')]")
+cofirm_del_tile = (By.XPATH,".//span[contains(text(),'确认删除')]")     #确认删除标题
 
 
-
-
+#角色编辑
+edit_role = (By.XPATH,".//button/span[contains(text(),'角色编辑')]")     #角色编辑按钮
+edit_title = (By.XPATH,".//div[contains(text(),'编辑')]")       #编辑的标题
+edit_role_name_input = (By.XPATH,".//input[@placeholder='请输入角色名称']")        #角色名称输入框
+edit_role_descrip_input = (By.XPATH,".//textarea[@id='description']")        #角色描述输入框
+edit_role_confirm_btn = By.XPATH,".//button/span[contains(text(),'确 定')]"       #确定按钮
+edit_role_success = (By.XPATH,".//span[contains(text(),'修改成功')]")
 
 
 
