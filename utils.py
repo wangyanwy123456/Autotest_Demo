@@ -25,10 +25,10 @@ class DriverUtils:
                 cls._driver = None
 
 
-# if __name__ == "__main__":
-#     driverutils = DriverUtils()
-#     driverutils.get_driver("http://www.baidu.com")
-#     driverutils.quit_driver()
-#     driverutils.get_driver("http://10.194.188.76/homePage")
+if __name__ == "__main__":
+    driverutils = DriverUtils()
+    driverutils.get_driver("http://10.194.188.76/homePage")
+    driverutils.quit_driver()
+    driverutils.get_driver("http://10.194.188.76/homePage")
 
 

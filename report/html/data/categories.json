@@ -1,0 +1,37 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: .//span[contains(text(),'管理员1')]",
+      "children" : [ {
+        "name" : "test_add_first_department",
+        "uid" : "9ec50336c678a683",
+        "parentUid" : "de5b916d973a25fd01f8e0dfe056cf03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1610460629176,
+          "stop" : 1610460629176,
+          "duration" : 0
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_child_department",
+        "uid" : "3ad8c30e926fe9e4",
+        "parentUid" : "de5b916d973a25fd01f8e0dfe056cf03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1610460652801,
+          "stop" : 1610460652801,
+          "duration" : 0
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "de5b916d973a25fd01f8e0dfe056cf03"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

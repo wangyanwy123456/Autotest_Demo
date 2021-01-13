@@ -1,0 +1,37 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "PC-20200805IJRU",
+    "children" : [ {
+      "name" : "1600-MainThread",
+      "children" : [ {
+        "name" : "test_add_child_department",
+        "uid" : "3ad8c30e926fe9e4",
+        "parentUid" : "9c169f7fa0ca295079620f687acd9deb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1610460652801,
+          "stop" : 1610460652801,
+          "duration" : 0
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_first_department",
+        "uid" : "9ec50336c678a683",
+        "parentUid" : "9c169f7fa0ca295079620f687acd9deb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1610460629176,
+          "stop" : 1610460629176,
+          "duration" : 0
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9c169f7fa0ca295079620f687acd9deb"
+    } ],
+    "uid" : "13b0025c4c35967bb4f0186784e53645"
+  } ]
+}

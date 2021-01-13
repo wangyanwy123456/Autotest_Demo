@@ -1,0 +1,3 @@
+"Status","Name","Duration in ms","Description"
+"broken","Test.Test_ ManagementCenter.test_department_manage.TestDepartmentManage#test_add_child_department","0",""
+"broken","Test.Test_ ManagementCenter.test_department_manage.TestDepartmentManage#test_add_first_department","0",""

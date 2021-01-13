@@ -1,0 +1,21 @@
+[ {
+  "uid" : "3ad8c30e926fe9e4",
+  "name" : "test_add_child_department",
+  "time" : {
+    "start" : 1610460652801,
+    "stop" : 1610460652801,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9ec50336c678a683",
+  "name" : "test_add_first_department",
+  "time" : {
+    "start" : 1610460629176,
+    "stop" : 1610460629176,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

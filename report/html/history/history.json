@@ -1,0 +1,42 @@
+{
+  "510e7fab31deb8e8ca50759975f13e29" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9ec50336c678a683",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: .//span[contains(text(),'管理员1')]",
+      "time" : {
+        "start" : 1610460629176,
+        "stop" : 1610460629176,
+        "duration" : 0
+      }
+    } ]
+  },
+  "97efc73c9fdb5955c42df3d64a8b8e76" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3ad8c30e926fe9e4",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: .//span[contains(text(),'管理员1')]",
+      "time" : {
+        "start" : 1610460652801,
+        "stop" : 1610460652801,
+        "duration" : 0
+      }
+    } ]
+  }
+}

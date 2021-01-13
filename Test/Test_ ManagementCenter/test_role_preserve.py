@@ -21,27 +21,27 @@ class TestRoleProserve:
     #退出数据中台平台
     def teardown_class(self):
         time.sleep(5)
-        self.driver.quit()
+        DriverUtils.quit_driver()
 
     # 新增角色
     def test_add_role(self):
         self.mcpage.click_MC()
-        self.mcpage.click_menu("角色维护")
+        self.mcpage.click_menu("角色维护","系统管理")
         self.mcpage.add_role("角色名称001", "code001", "1234角色描述角色描述角色描述角色描述角色描述1234")
 
     #查询角色
     def test_select_role(self):
-         # self.mcpage.click_MC()
+         self.mcpage.click_MC()
          # self.mcpage.click_menu("角色维护")
          self.mcpage.select_role("角色名称001")
 
     def test_edit_role(self):
-        # self.mcpage.click_MC()
+        self.mcpage.click_MC()
         # self.mcpage.click_menu("角色维护")
         self.mcpage.edit_role("角色名称001", "新角色名称", "新角色描述")
 
     def test_delete_role(self):
-        # self.mcpage.click_MC()
+        self.mcpage.click_MC()
         # self.mcpage.click_menu("角色维护")
         self.mcpage.delete_role("新角色名称")
 

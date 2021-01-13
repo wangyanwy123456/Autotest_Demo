@@ -21,6 +21,14 @@ class Base():
         return self.driver.find_element(loc[0], loc[1])
 
 
+
+    # 找到一组元素对象并返回其中一个
+    def find_elements(self, loc,num):
+        time.sleep(1)
+        ele = self.driver.find_elements(loc[0], loc[1])
+        return ele[num]
+
+
     #点击元素
     def click_ele(self, loc):
         self.find_ele(loc).click()
@@ -45,11 +53,18 @@ class Base():
         self.driver.execute_script("arguments[0].click();",ele)
 
 
-    #获取当前页面的标题
-    def get_page_title(self,cur_title):
-        title = self.driver.title()
+    #判断当前页面是否是预期页面
+    def get_page_title(self,cur_title,loc):
+        title = self.driver.title
         if cur_title == title:
             return cur_title
+        else:
+            self.click_ele(loc)
+
+    #刷新页面并增加等待时间
+    def refresh_page(self):
+        self.driver.refresh()
+        time.sleep(3)
 
 
 

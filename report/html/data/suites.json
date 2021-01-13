@@ -1,0 +1,41 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Test.Test_ ManagementCenter",
+    "children" : [ {
+      "name" : "test_department_manage",
+      "children" : [ {
+        "name" : "TestDepartmentManage",
+        "children" : [ {
+          "name" : "test_add_first_department",
+          "uid" : "9ec50336c678a683",
+          "parentUid" : "c84a5d8c68527ebaad5f7f340926f158",
+          "status" : "broken",
+          "time" : {
+            "start" : 1610460629176,
+            "stop" : 1610460629176,
+            "duration" : 0
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_add_child_department",
+          "uid" : "3ad8c30e926fe9e4",
+          "parentUid" : "c84a5d8c68527ebaad5f7f340926f158",
+          "status" : "broken",
+          "time" : {
+            "start" : 1610460652801,
+            "stop" : 1610460652801,
+            "duration" : 0
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c84a5d8c68527ebaad5f7f340926f158"
+      } ],
+      "uid" : "3d35cc896bdb97a9a580d3252d4793eb"
+    } ],
+    "uid" : "ca02ce9c63def8dd6035001bac603636"
+  } ]
+}
