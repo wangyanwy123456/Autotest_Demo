@@ -3,9 +3,23 @@ from page.management_center_page import MCPage
 from page.login_page import LoginPage
 import time
 from utils import DriverUtils
+from base.read_yaml_data import read_yaml_data
 
 import os, sys
 sys.path.append(os.getcwd())
+
+# 获取模拟新增部门的yaml数据
+def get_add_first_department_data():
+    data_list = []
+    data = read_yaml_data("management_center","department_manage.yaml")
+    # print(data)
+    for i in data.keys():
+        data2 = data.get(i)
+        chirld_menuName = data2.get("chirld_menuName")
+        first_menuName = data2.get("first_menuName")
+        department_name = data2.get("department_name")
+        data_list.append((chirld_menuName,first_menuName,department_name))
+    return data_list
 
 
 class TestDepartmentManage:
@@ -23,11 +37,18 @@ class TestDepartmentManage:
         time.sleep(5)
         DriverUtils.quit_driver()
 
+    # # 新增部门
+    # def test_add_first_department(self):
+    #     self.mcpage.click_MC()
+    #     self.mcpage.click_menu("部门管理","系统管理")
+    #     self.mcpage.add_first_department("添加一级部门测试001")
+
     # 新增部门
-    def test_add_first_department(self):
+    @pytest.mark.parametrize("chirld_menuName,first_menuName,department_name", get_add_first_department_data())
+    def test_add_first_department(self,chirld_menuName,first_menuName,department_name):
         self.mcpage.click_MC()
-        self.mcpage.click_menu("部门管理","系统管理")
-        self.mcpage.add_first_department("添加一级部门测试001")
+        self.mcpage.click_menu(chirld_menuName,first_menuName)
+        self.mcpage.add_first_department(department_name)
 
 
     #验证不能添加同名部门

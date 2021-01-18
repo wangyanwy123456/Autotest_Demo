@@ -200,6 +200,8 @@ class MCPage(Base):
         self.find_ele(page.role_delete_success)  # 删除成功
         time.sleep(1)
 
+
+    #删除一级部门
     def delete_first_department(self,first_department_name):
         self.refresh_page()
         #点击一级部门前面的选择框
@@ -215,6 +217,7 @@ class MCPage(Base):
 
 
     #项目管理
+    #添加项目
     def add_item(self,item_name,item_num):
         #点击新增
         self.click_cover_ele(page.add_btn)
@@ -229,6 +232,64 @@ class MCPage(Base):
         time.sleep(1)
         #验证添加成功弹窗
         self.find_ele(page.add_department_success)
+
+
+    #编辑项目
+    def edit_item(self, old_item_num,new_item_name, new_item_num):
+        #选择项目,点击编辑
+        self.click_cover_ele([By.XPATH,".//td[contains(text(),'{}')]//..//a[contains(text(),'编辑')]".format(old_item_num)])
+        self.find_ele(page.item_edit_title)
+        item_name_ele = self.find_elements(page.item_name_input, 1)
+        item_name_ele.send_keys(new_item_name)  # 输入项目名称
+        item_num_ele = self.find_elements(page.item_num_input, 1)
+        item_num_ele.send_keys(new_item_num)  # 输入项目编号
+        time.sleep(1)
+        # 点击确定按钮
+        self.click_cover_ele(page.confirm_btn)
+        time.sleep(1)
+        # 验证修改成功弹窗
+        self.find_ele(page.edit_role_success)
+
+    # 查询项目
+    def select_item(self,item_name,item_num):
+        # 输入查询的项目名称
+        self.send_text(page.item_name_input, item_name)
+        # 输入查询的项目编号
+        self.send_text(page.item_num_input, item_num)
+        # 点击查询按钮
+        self.click_cover_ele(page.select_btn)
+        time.sleep(1)
+        self.find_ele(page.item_num_input)
+        # 点击重置按钮
+        self.click_cover_ele(page.reset_btn)
+        time.sleep(1)
+        self.find_ele(page.default_page)
+        time.sleep(1)
+
+    #删除项目
+    def delete_item(self,item_num):
+        # self.refresh_page()
+        #点击项目前面的选择框
+        # self.click_cover_ele(
+        #     [By.XPATH, ".//td[contains(text(),'{}')]/../td//input[@class='ant-checkbox-input']".format(item_num)])
+        # 选择项目,点击更多
+        time.sleep(1)
+        # self.click_cover_ele(
+        #     [By.XPATH, ".//td[contains(text(),'{}')]//..//a[contains(text(),'更多')]".format(item_num)])
+        self.click_cover_ele(
+                [By.XPATH, ".//*[contains(text(),'更多')]"])
+        time.sleep(1)
+        # delete = self.find_elements(page.delete_item, 1)
+        # self.click_cover_ele(delete)     #点击删除
+        # self.find_ele(page.cofirm_del_tile)  # 定位到确认删除标题
+        # time.sleep(1)
+        # self.click_cover_ele(page.edit_role_confirm_btn)  # 确定
+        # time.sleep(1)
+        # self.find_ele(page.role_delete_success)  # 删除成功
+        # time.sleep(1)
+
+
+
 
 
 

@@ -23,7 +23,7 @@ add_role_btn = By.XPATH,".//button/span[contains(text(),'角色录入')]"    #�
 select_role_input = By.XPATH,".//input[@class='ant-input']"      #查询角色输入框
 select_btn = By.XPATH,".//i/../span[contains(text(),'查询')]"      #查询按钮
 reset_btn = By.XPATH,".//i/../span[contains(text(),'重置')]"      #重置按钮
-default_page = By.XPATH,".// li[contains(text(), '1-10')]"     #重置之后的默认页面
+default_page = By.XPATH,".// li[contains(text(), '1-')]"     #重置之后的默认页面
 
 #角色维护模块---新增角色页面
 add_title = By.XPATH,".//div[contains(text(),'新增')]"       #新增页面标题
@@ -69,4 +69,8 @@ add_same_department_msg = (By.XPATH,".//i/../span[contains(text(),'同父部门�
 add_btn = By.XPATH,".//button/span[contains(text(),'新增')]"   #新增按钮
 item_name_input = By.XPATH,".//input[@placeholder='请输入项目名称']"   #项目名称输入框
 item_num_input = By.XPATH,".//input[@placeholder='请输入项目编号']"   #项目编号输入框
+item_edit_title = By.XPATH,".//div[@id='rcDialogTitle0'][contains(text(),'编辑')]"     #编辑的标题
+batch_act = By.XPATH,".//button/span[contains(text(),'批量操作')]"      #批量操作按钮
+delete_item = By.XPATH,".//li[contains(text(),'删除')]"      #删除
+
 

@@ -3,6 +3,7 @@ import logging
 import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+import yaml, os
 
 
 
@@ -65,8 +66,6 @@ class Base():
     def refresh_page(self):
         self.driver.refresh()
         time.sleep(3)
-
-
 
 
 # if __name__ == "__main__":

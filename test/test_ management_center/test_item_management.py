@@ -29,4 +29,22 @@ class TestItemManage:
         self.mcpage.click_menu("项目管理","项目管理")
         self.mcpage.add_item("新增项目测试","item001")
 
+    # 编辑项目
+    def test_edit_item(self):
+        self.mcpage.click_MC()
+        self.mcpage.click_menu("项目管理", "项目管理")
+        self.mcpage.edit_item("item001","新增项目测试编辑", "item001edit")
+
+    # 编辑项目
+    def test_select_item(self):
+        self.mcpage.click_MC()
+        self.mcpage.click_menu("项目管理", "项目管理")
+        self.mcpage.select_item("新增项目测试编辑", "item001edit")
+
+    # 删除项目
+    def test_delete_item(self):
+        self.mcpage.click_MC()
+        self.mcpage.click_menu("项目管理", "项目管理")
+        self.mcpage.delete_item( "item001")
+
 
