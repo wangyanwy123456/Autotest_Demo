@@ -1,15 +1,6 @@
-test_add_first_department001:
+test_unable_add_same_first_department001:
   chirld_menuName: '部门管理'
   first_menuName: '系统管理'
-  department_name: '添加一级部门测试001'
+  same_department_name: '添加一级部门测试004'
 
-test_add_first_department002:
-  chirld_menuName: '部门管理'
-  first_menuName: '系统管理'
-  department_name: '添加一级部门测试002'
-
-test_add_first_department003:
-  chirld_menuName: '部门管理'
-  first_menuName: '系统管理'
-  department_name: '添加一级部门测试003'
 
